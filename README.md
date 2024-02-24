@@ -1,4 +1,4 @@
-# DDD-BOOT
+# test
 DDD (Domain-Driven Design) 领域驱动设计工程化落地框架
 
 * [快速开始](#快速开始)
