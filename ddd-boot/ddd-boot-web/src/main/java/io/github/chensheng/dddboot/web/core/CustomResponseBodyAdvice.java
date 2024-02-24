@@ -35,6 +35,11 @@ public class CustomResponseBodyAdvice implements ResponseBodyAdvice<Object> {
             return body;
         }
 
+        IgnoreResponseWrapper ignoreResponseWrapper = returnType.getMethodAnnotation(IgnoreResponseWrapper.class);
+        if (ignoreResponseWrapper != null) {
+            return body;
+        }
+
         if (selectedConverterType.isAssignableFrom(StringHttpMessageConverter.class)) {
             return body;
         }
