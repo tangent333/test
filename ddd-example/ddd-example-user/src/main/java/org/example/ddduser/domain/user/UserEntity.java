@@ -57,14 +57,14 @@ public class UserEntity {
         if(TextUtil.isBlank(newPassword)) {
             throw new BizException("新密码不能为空");
         }
-        if(newPassword.length() < 6) {
-            throw new BizException("密码不能少于6位数");
+        if(newPassword.length() < 8) {
+            throw new BizException("密码不能少于8位数");
         }
         if(!this.password.equals(oldPassword)) {
             throw new BizException("原密码错误");
         }
         if(oldPassword.equals(newPassword)) {
-            throw new BizException("新密码不能与旧密码相同");
+            throw new BizException("新密码不能与原密码相同");
         }
 
         this.password = newPassword;
