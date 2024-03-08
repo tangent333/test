@@ -44,10 +44,10 @@ public class ExcelUtil {
      */
     public static void write(OutputStream outputStream, List<?> rowDataList, InputStream templateIs) {
         if (outputStream == null) {
-            throw new IllegalArgumentException("outputStream must not be null");
+            throw new IllegalArgumentException("outputStream should not be null");
         }
         if (CollectionUtil.isEmpty(rowDataList)) {
-            throw new IllegalArgumentException("rowDataList must not be empty");
+            throw new IllegalArgumentException("rowDataList should not be empty");
         }
 
         ExcelWriterFactory.write(outputStream, templateIs, rowDataList);
